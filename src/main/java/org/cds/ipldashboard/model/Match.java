@@ -24,28 +24,6 @@ public class Match {
     private String umpire1;
     private String umpire2;
 
-    public Match() {
-    }
-
-    public Match(long id, String city, LocalDate date, String playerOfMatch, String venue, String team1, String team2,
-            String tossWinner, String tossDecision, String matchWinner, String result, String resultMargin,
-            String umpire1, String umpire2) {
-        this.id = id;
-        this.city = city;
-        this.date = date;
-        this.playerOfMatch = playerOfMatch;
-        this.venue = venue;
-        this.team1 = team1;
-        this.team2 = team2;
-        this.tossWinner = tossWinner;
-        this.tossDecision = tossDecision;
-        this.matchWinner = matchWinner;
-        this.result = result;
-        this.resultMargin = resultMargin;
-        this.umpire1 = umpire1;
-        this.umpire2 = umpire2;
-    }
-
     public long getId() {
         return id;
     }
