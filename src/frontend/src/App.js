@@ -1,6 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { TeamPage } from './pages/TeamPage';
+import { MatchPage } from './pages/MatchPage';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
               <Routes>
                   <Route exact path="/teams/:teamName" element={<TeamPage/>}></Route>
                   <Route exact path="/" element={<TeamPage/>}></Route>
+                  <Route exact path="/teams/:teamName/matches/:year" element={<MatchPage/>}></Route>
             </Routes>
           </Router>
        
