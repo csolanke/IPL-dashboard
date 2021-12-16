@@ -44,7 +44,7 @@ export const TeamPage = () => {
     { title: 'Wins', value: team.totalWins, color: '#4da375' },
     { title: 'Losses', value:team.totalMatches - team.totalWins, color: '#a34d5d' },
        ]}
-     />;
+     />
       </div>
       <div className="match-detail-section">
         <h3>Latest Matches</h3>
