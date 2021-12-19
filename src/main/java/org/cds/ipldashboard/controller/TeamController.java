@@ -25,6 +25,8 @@ public class TeamController {
         this.matchRepository = matchRepository;
     }
 
+    
+
     @GetMapping("/teams/{teamName}")
     public Team getTeam(@PathVariable String teamName) {
 
@@ -32,6 +34,13 @@ public class TeamController {
         team.setMatches(matchRepository.findLatestMatchesbyTeam(teamName, 4));
 
         return team;
+    }
+
+    @GetMapping("/teams")
+    public Iterable<Team> getAllTeams()
+    { 
+        return teamRepository.findAll();
+
     }
 
     @GetMapping("/teams/{teamName}/matches")
