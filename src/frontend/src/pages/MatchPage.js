@@ -14,7 +14,7 @@ export const MatchPage =()=> {
     ()=>{
        const fetchMatches = async ()=>{
   const teamName = "Delhi Capitals"
-        const response = await fetch(`http://localhost:8080/teams/${teamName}/matches?year=${year}`);
+        const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/teams/${teamName}/matches?year=${year}`);
         const data = await response.json();
         setMatches(data);
 
