@@ -14,7 +14,6 @@ export const HomePage =()=>{
           const fetchAllTeams = async () => {
             const response = await fetch('http://localhost:8080/teams');
             const data = await response.json();
-            console.log(data);
             setTeams(data);
           };
     
@@ -31,7 +30,7 @@ export const HomePage =()=>{
           <h1 className="app-name">CDS IPL Dashboard</h1>
       </div>
      <div className="team-grid">
-      { teams.map(team => <TeamTile teamName={team.teamName}/>)}
+      { teams.map(team => <TeamTile key={team.id} teamName={team.teamName}/>)}
      </div>
 
     </div>
