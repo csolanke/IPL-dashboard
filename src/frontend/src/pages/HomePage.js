@@ -1,6 +1,7 @@
 import {React} from 'react';
 import {useState, useEffect} from 'react'
 import { TeamTile } from '../components/TeamTile';
+import './HomePage.scss';
 
 
 export const HomePage =()=>{
